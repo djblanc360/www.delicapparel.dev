@@ -22,6 +22,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 				<p><i class="fa fa-comments"></i> <?php comments_popup_link( __( '0 Comments', 'destin' ), __( '1 Comment', 'destin' ), __( '% Comments', 'destin' ), '', '' ); ?></p>
 				<?php } ?>
 			</div>
+			<!--first row -->
 			<div class="col-md-9">
 				<h1 class="entry-title taggedlink">
 					<?php if ( is_single() ) : ?>

@@ -9,6 +9,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<div id="primary" <?php bavotasan_primary_attr(); ?>>
+		<!--the following line is known as the loop-->
 			<?php while ( have_posts() ) : the_post(); ?>
 	
 				<?php get_template_part( 'content', get_post_format() ); ?>
