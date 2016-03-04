@@ -3,6 +3,7 @@
  * The Template for displaying all single posts.
  *
  * @since 1.0.0
+ *single.php refers to the posts
  */
 get_header(); ?>
 
@@ -13,7 +14,10 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 	
 				<?php get_template_part( 'content', get_post_format() ); ?>
-	
+				
+				<!--also can be found in content.php-->
+				<?php the_category( '&bull;' ); ?>
+				
 				<div id="posts-pagination" class="clearfix">
 					<h3 class="sr-only"><?php _e( 'Post navigation', 'destin' ); ?></h3>
 					<div class="previous pull-left"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> %title', 'destin' ) ); ?></div>
