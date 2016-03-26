@@ -28,8 +28,9 @@ function delicaparel_front_page_render() {
 		<div class="item">
 			<figure class="effect-julia">
 				<?php
-				if ( has_post_thumbnail() )
-					the_post_thumbnail( 'home' );
+					$picture = get_field('category_picture');
+				if (!empty($picture))
+					echo '<img src="' . $picture['url'] . '" alt="' . $picture['alt'] . '" />';
 				else
 					echo '<img src="' . BAVOTASAN_THEME_URL . '/library/images/no-image.jpg" alt="" />';
 				?>
@@ -57,3 +58,4 @@ add_theme_support( 'infinite-scroll', array(
 		'footer_widgets' => 'extended-footer',
         'render'=> 'delicaparel_front_page_render',
 	) );
+add_theme_support( 'post-thumbnails', array( 'category' ) );
