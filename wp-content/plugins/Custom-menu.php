@@ -1,8 +1,5 @@
 <?php
-/**
- * @package Hello_Dolly
- * @version 1.6
- */
+
 /*
 Plugin Name: Custom-menu
 Plugin URI: http://wordpress.org/plugins/hello-dolly/
@@ -14,9 +11,10 @@ function register_delic_menu()
 {
 	register_nav_menus( array(
 	'pluginbuddy_mobile' => 'Custom Menu Area',
-	'footer_menu' => 'My Custom Footer Menu',
+	'custom-menu' => 'Custom Frontpage Menu',
 ) );
 }
+add_action('init', 'register_delic_menu');
 
 
 

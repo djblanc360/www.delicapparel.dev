@@ -32,6 +32,7 @@ global $wp_query;
 			<?php
 		}
 	}
+	
 ?>
-
+<?php wp_nav_menu( array( 'theme_location' => 'custom-menu' ) ); ?>
 <?php get_footer(); ?>
