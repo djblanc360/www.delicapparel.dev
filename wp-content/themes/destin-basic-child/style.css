@@ -18,3 +18,40 @@ body
 	font-weight:bold;
 }
 .entry-title{background-color:purple;}
+
+.category-apparels-container {
+	min-height: 400px;
+    margin: 0;
+    border-collapse: separate;
+    font-family: Arial,Tahoma,Sans-Serif;
+    font-size: 14px;
+    color: #333;
+    margin: auto;
+}
+
+#category-page .apparel {
+    height: 300px;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #f0f0f0;
+    margin: 0 7px 15px;
+    padding-top: 15px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    border-collapse: separate;
+    display: inline-block;
+}
+
+#category-page .apparel a {
+    color: #303030;
+    text-decoration: none;
+}
+
+#category-page .apparel .product-title {
+	float: left;
+}
+
+#category-page .apparel .product-price {
+	float: right;
+}
