@@ -55,3 +55,7 @@ body
 #category-page .apparel .product-price {
 	float: right;
 }
+
+.sticky-container .item, .sticky-container .stamp {
+    padding: 0px;
+}
