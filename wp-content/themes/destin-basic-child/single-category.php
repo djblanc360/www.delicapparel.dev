@@ -42,6 +42,7 @@ get_header(); ?>
 	        </div>
 	        <?php echo '<a href="' . get_permalink($post->ID) . '" class="product-title">' . the_title() . '</a>';?>
         	<div class="product-price">$44.99</div>
+        	<div><?php add_to_cart_button($post->ID);?></div>
 		</div>
 	<?php endwhile; ?>
 </div>

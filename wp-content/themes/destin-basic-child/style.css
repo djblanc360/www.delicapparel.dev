@@ -59,3 +59,9 @@ body
 .sticky-container .item, .sticky-container .stamp {
     padding: 0px;
 }
+
+.checkout-image {
+    height: 100px;
+}
+
+

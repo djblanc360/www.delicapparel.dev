@@ -32,6 +32,7 @@ $bavotasan_theme_options = bavotasan_theme_options();
 					<?php bloginfo( 'name' ); ?>
 				</a></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<?php checkout_cart_button($_SESSION['mfsc_id']) ?>
 			</div>
 
 			<nav id="site-navigation" class="navbar navbar-inverse" role="navigation">
