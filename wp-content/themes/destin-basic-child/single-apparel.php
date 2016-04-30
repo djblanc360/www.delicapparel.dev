@@ -42,7 +42,7 @@ get_header(); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 					<?php endif; // is_single() ?>
 				</h1>
-
+	        	<div><?php add_to_cart_button(get_the_ID());?></div>
 				<div class="entry-meta">
 					<?php
 					printf( __( 'by %s on %s', 'destin' ),
