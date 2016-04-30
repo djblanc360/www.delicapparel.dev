@@ -50,7 +50,6 @@ get_header(); ?>
 						);
 					?>
 				</div>
-
 			    <div class="entry-content description clearfix">
 				    <?php
 					if ( is_singular() )
