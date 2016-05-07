@@ -16,6 +16,7 @@ get_header(); ?>
  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		$picture = get_field('image');
+		$price = get_field('price');
 		if (!empty($picture))
 			echo '<img src="' . $picture['url'] . '" alt="' . $picture['alt'] . '" />';
 		else
@@ -42,7 +43,10 @@ get_header(); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 					<?php endif; // is_single() ?>
 				</h1>
-	        	<div><?php add_to_cart_button(get_the_ID());?></div>
+	        	<div>
+	        		<h3><?php echo $price . "$"; ?></h3>
+	        		<?php add_to_cart_button(get_the_ID());?>
+	        	</div>
 				<div class="entry-meta">
 					<?php
 					printf( __( 'by %s on %s', 'destin' ),

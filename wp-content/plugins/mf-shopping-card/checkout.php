@@ -17,6 +17,7 @@
 	));
 	$items = array_count_values((explode(";", $content)));
 	$content = "";
+	$total = 0;
 	foreach($items as $key => $value) {
 		if ($key != '') {
 			$product = get_post($key);
@@ -26,6 +27,8 @@
 	        	<?php echo '<a href="' . get_permalink($product) . '" class="product-title">';?>
 					<?php
 						$picture = get_field('image', $product);
+						$price = get_field('price', $product);
+						$total = $total + ($price * $value);
 						if (!empty($picture))
 							echo '<img class="checkout-image" src="' . $picture['url'] . '" alt="' . $picture['alt'] . '" />';
 						else
@@ -33,9 +36,12 @@
 					?>
 				</a>
 				<h3>Number: <?php echo $value; ?></h3>
+				<h3>Single: <?php echo $price . "$"; ?></h3>
+				<h3>Total: <?php echo ($price * $value) . "$"; ?></h3>
 				</div>
 			<?php
 		}
 	}
 ?>
+<h3>Total of the checkout: <?php echo $total . "$"; ?></h3>
 <?php get_footer(); ?>
